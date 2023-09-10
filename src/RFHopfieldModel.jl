@@ -22,7 +22,7 @@ function run(N::Int, d, p; qx=0, qz=0,
     if d > 0 
         x, z, C = create_patterns(N, d, p; binary_coeff, seed=seedx)
     else 
-        x = create_patterns(N, p; binary_coeff, seed=seedx)
+        x = create_patterns(N, p; seed=seedx)
     end 
     J = create_couplings(x)
   
