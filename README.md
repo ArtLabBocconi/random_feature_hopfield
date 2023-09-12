@@ -1,6 +1,6 @@
 # Random-Features Hopfield Model 
 
-Code needed to reproduce the results of the pre-print  
+Code needed to reproduce the results of the paper
 _"Storage and Learning phase transitions in the Random-Features Hopfield Model"_ [[arxiv](https://arxiv.org/abs/2303.16880)]
 
 This project contains three folders.
