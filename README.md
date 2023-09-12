@@ -9,10 +9,9 @@ This project contains three folders.
 - `saddle_point` contains the codes to solve the saddle point equations described in the manuscript.
 
 ## Numerical Results
-### General Usage 
-Todo...
+
 ### Example 
-Below we show an example of how to generate a factor magnetization curve
+Below we show an example of how to generate a factor magnetisation curve
 as a function of $\alpha$, given $N$ and $\alpha_d$
 ```julia
 julia> include("RFHopfieldModel.jl"); RFH=RFHopfieldModel
@@ -30,7 +29,7 @@ julia> for alpha in LinRange(0.1, 0.6, 20)
            push!(res, [alpha q])
        end
 julia> r = vcat(res...)
-julia> plot(r[:,1], r[:,2]) # plot feature magnetization as a function of alpha
+julia> plot(r[:,1], r[:,2]) # plot feature magnetisation as a function of alpha
 ```
 
 ### Reproduce results
@@ -55,7 +54,7 @@ The file `hopfield_RF_features_T=0.jl` contains the definition of the saddle-poi
 `P`. The functions relevant to the user are the following: 
 - `converge(...)` takes in input values $\alpha$, $\alpha_D$, and an initial condition of the order parameters and finds a fixed point by iterating the saddle-point equations.
 - `span(...)` runs `converge(...)` for a given interval of $\alpha$ or $\alpha_D$, using the fixed point at the previous run as the initial condition of the next one. It prints all the fixed points on a file.
-- `find_alphac(...)` runs `converge(...)` for a given interval of $\alpha$ or $\alpha_D$ and prints to a file only when the magnetization changes abruptly, signaling the phase transition.
+- `find_alphac(...)` runs `converge(...)` for a given interval of $\alpha$ or $\alpha_D$ and prints to a file only when the magnetisation changes abruptly, signaling the phase transition.
 
 The scripts are designed to be used withing the julia REPL. 
 An example of usage is 
